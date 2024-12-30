@@ -14,6 +14,10 @@ class DefaultController extends AbstractController
     #[Route('/{path}', name: 'app_default', requirements: ['path' => '[^/].+'])]
     public function index(string $path = 'index'): Response
     {
+        if (str_ends_with($path, '/')) {
+            return $this->redirectToRoute('app_default', ['path' => rtrim($path, '/')], Response::HTTP_MOVED_PERMANENTLY);
+        }
+
         $parameters = [
             'path' => '/'.$path,
             'id' => preg_replace('/[^a-z0-9-]+/', '-', $path),
