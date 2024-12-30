@@ -1,15 +1,8 @@
 services:
-  php:
-    # image: dunglas/frankenphp
+  web:
+    # image: php:8.3-apache
     build: .
     ports:
-      - '80:80'
-      - '443:443'
-      - '443:443/udp'
-    volumes:
-      - .:/app
-
-  composer:
-    image: composer:latest
+      - "8888:80"
     volumes:
       - .:/app
