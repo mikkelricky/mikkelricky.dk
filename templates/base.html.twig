@@ -29,24 +29,14 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            {% set menu_items = [
-                {
-                    path: path('app_default', {path: 'praktiske-oplysninger'}),
-                    title: 'Praktiske oplysninger',
-                },
-                {
-                    path: path('app_default', {path: 'curriculum-vitae'}),
-                    title: 'Curriculum vitæ',
-                },
-            ] %}
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    {% for menu_item in menu_items %}
+                    {% for page in menu_pages %}
                     <li class="nav-item">
-                        {% if path == menu_item.path %}
-                            <a class="nav-link active" aria-current="page" href="{{ menu_item.path }}">{{ menu_item.title }}</a>
+                        {% if path == page.path %}
+                            <a class="nav-link active" aria-current="page" href="{{ page.path }}">{{ page.title }}</a>
                         {% else %}
-                            <a class="nav-link" href="{{ menu_item.path }}">{{ menu_item.title }}</a>
+                            <a class="nav-link" href="{{ page.path }}">{{ page.title }}</a>
                         {% endif %}
                     </li>
                     {% endfor %}

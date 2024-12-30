@@ -98,7 +98,6 @@ tasks:
       - docker pull --quiet peterdavehello/markdownlint
       - docker run --rm --volume "$PWD:/md" peterdavehello/markdownlint markdownlint '**/*.md'
       - task composer -- coding-standards-check
-      - docker run --volume "$PWD:/code" --rm pipelinecomponents/yamllint yamllint fixtures/
       - task console -- biomejs:check .
 
   coding-standards:assets:apply:
