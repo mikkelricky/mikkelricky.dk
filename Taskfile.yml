@@ -1,0 +1,126 @@
+version: '3'
+
+dotenv: [".env", ".env.local"]
+
+vars:
+  # https://taskfile.dev/reference/templating/
+  SITE_DOMAIN: '{{.TASK_SITE_DOMAIN | default .COMPOSE_SERVER_DOMAIN | default .COMPOSE_DOMAIN | default ""}}'
+  COMPOSER_INSTALL_ARGUMENTS: '{{ .TASK_COMPOSER_INSTALL_ARGUMENTS | default "" }}'
+  DOCKER_COMPOSE: '{{ .TASK_DOCKER_COMPOSE | default "docker compose" }}'
+
+tasks:
+  default:
+    cmds:
+      - task --list
+  silent: true
+
+  compose:
+    desc: "Run `docker compose` command. Example: task compose -- up --detach"
+    cmds:
+      - '{{ .DOCKER_COMPOSE }} {{ .CLI_ARGS }}'
+
+  compose-exec:
+    desc: "Run `docker compose exec` command handling content on stdin. Example: task compose-exec -- php php -v"
+    cmds:
+      # Check if we have content on stdin (cf.
+      # https://unix.stackexchange.com/questions/762992/bash-check-if-the-standard-input-contains-anything)
+      - if [[ ! -t 0 ]]; then task compose -- exec --no-TTY {{ .CLI_ARGS }}; else task compose -- exec {{ .CLI_ARGS }}; fi
+    silent: true
+
+  composer:
+    desc: "Run composer command. Example: task composer -- install"
+    cmds:
+      - task compose -- run --rm composer {{ .CLI_ARGS }}
+    silent: true
+
+  composer-install:
+    desc: "Run composer install command. Example: task composer-install"
+    cmds:
+      - task composer -- install {{ .COMPOSER_INSTALL_ARGUMENTS }}
+    silent: true
+
+  start:
+    desc: "Start docker compose stuff and install composer stuff"
+    cmds:
+      - task compose -- pull
+      - task compose -- up --detach --remove-orphans --build
+      - task composer-install
+    silent: true
+
+  console:
+    desc: "Run Symfony console command"
+    cmds:
+      # See https://serverfault.com/a/935674 for details on the if statement.
+      - |
+        if [ -z `docker compose ps -q php` ] || [ -z `docker ps -q --no-trunc | grep $(docker compose ps -q php)` ]; then
+          task compose -- run --rm php bin/console {{.CLI_ARGS}}
+        else
+          task compose-exec -- php bin/console {{.CLI_ARGS}}
+        fi
+    silent: true
+
+  site:url:
+    desc: "Show site URL"
+    cmds:
+      - echo {{.URL}}
+    vars:
+      URL:
+        # Compute base URL if not set.
+        sh: if [ ! -z "{{.SITE_DOMAIN}}" ]; then echo "https://{{.SITE_DOMAIN}}"; else echo "http://$(task compose -- port nginx 8080)"; fi
+    silent: true
+
+  site:update:
+    desc: "Update site"
+    prompt: "This will update your setup. Continue?"
+    cmds:
+      - task start
+      - task console -- doctrine:migrations:migrate --no-interaction
+      - task console -- cache:clear
+    silent: true
+
+  code-analysis:
+    desc: "Run code analysis"
+    cmds:
+      - task composer -- code-analysis
+
+  coding-standards:apply:
+    desc: "Apply coding standards"
+    cmds:
+      - docker pull --quiet peterdavehello/markdownlint
+      - docker run --rm --volume "$PWD:/md" peterdavehello/markdownlint markdownlint '**/*.md' --fix
+      - task composer -- coding-standards-apply
+      - task console -- biomejs:check . --write
+
+  coding-standards:check:
+    desc: "Apply coding standards"
+    cmds:
+      - task: coding-standards:apply
+      - docker pull --quiet peterdavehello/markdownlint
+      - docker run --rm --volume "$PWD:/md" peterdavehello/markdownlint markdownlint '**/*.md'
+      - task composer -- coding-standards-check
+      - docker run --volume "$PWD:/code" --rm pipelinecomponents/yamllint yamllint fixtures/
+      - task console -- biomejs:check .
+
+  coding-standards:assets:apply:
+    desc: "Apply coding standards for assets"
+    cmds:
+      - task console -- biomejs:check . --write
+
+  coding-standards:assets:check:
+    desc: "Apply and check coding standards for assets"
+    cmds:
+      - task: coding-standards:assets:apply
+      - task console -- biomejs:check .
+
+  coding-standards:markdown:apply:
+    desc: "Apply coding standards for Markdown"
+    cmds:
+      - docker pull --quiet peterdavehello/markdownlint
+      - docker run --rm --volume "$PWD:/md" peterdavehello/markdownlint markdownlint '**/*.md' --fix
+
+  coding-standards:markdown:check:
+    desc: "Apply and check coding standards for Markdown"
+    cmds:
+      - task: coding-standards:markdown:apply
+      - docker pull --quiet peterdavehello/markdownlint
+      - docker run --rm --volume "$PWD:/md" peterdavehello/markdownlint markdownlint '**/*.md'

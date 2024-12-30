@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+    {{ parent() }}
+
+    {{ importmap('index') }}
+{% endblock %}
+
+{% block content %}
+    <div id="pipfugl"></div>
+
+    <p>
+        <a class="btn btn-lg btn-success" href="https://mad.mikkelricky.dk/">Opskrifter</a>
+    </p>
+{% endblock %}
