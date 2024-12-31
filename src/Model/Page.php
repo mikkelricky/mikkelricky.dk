@@ -16,6 +16,9 @@ class Page
         return $this->title;
     }
 
+    /**
+     * @psalm-suppress PossiblyUnusedMethod
+     */
     public function getPath(): string
     {
         return $this->path;

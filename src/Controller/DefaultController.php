@@ -9,6 +9,9 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Attribute\Route;
 use Twig\Error\LoaderError;
 
+/**
+ * @psalm-suppress UnusedClass
+ */
 class DefaultController extends AbstractController
 {
     #[Route('/{path}', name: 'app_default', requirements: ['path' => '[^/].+'])]
@@ -38,6 +41,9 @@ class DefaultController extends AbstractController
         }
     }
 
+    /**
+     * @return Page[]
+     */
     private function getPages(): array
     {
         $pages = [
@@ -52,6 +58,9 @@ class DefaultController extends AbstractController
         return $pages;
     }
 
+    /**
+     * @return Page[]
+     */
     private function getMenuPages(): array
     {
         $pages = array_filter($this->getPages(), static fn (Page $page) => null !== $page->getMenuIndex());

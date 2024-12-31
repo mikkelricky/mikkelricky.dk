@@ -20,7 +20,7 @@ tasks:
       - '{{ .DOCKER_COMPOSE }} {{ .CLI_ARGS }}'
 
   compose-exec:
-    desc: "Run `docker compose exec` command handling content on stdin. Example: task compose-exec -- php php -v"
+    desc: "Run `docker compose exec` command handling content on stdin. Example: task compose-exec -- web php -v"
     cmds:
       # Check if we have content on stdin (cf.
       # https://unix.stackexchange.com/questions/762992/bash-check-if-the-standard-input-contains-anything)
@@ -30,7 +30,7 @@ tasks:
   composer:
     desc: "Run composer command. Example: task composer -- install"
     cmds:
-      - task compose -- run --rm composer {{ .CLI_ARGS }}
+      - task compose -- exec web composer {{ .CLI_ARGS }}
     silent: true
 
   composer-install:
@@ -52,11 +52,17 @@ tasks:
     cmds:
       # See https://serverfault.com/a/935674 for details on the if statement.
       - |
-        if [ -z `docker compose ps -q php` ] || [ -z `docker ps -q --no-trunc | grep $(docker compose ps -q php)` ]; then
-          task compose -- run --rm php bin/console {{.CLI_ARGS}}
+        if [ -z `docker compose ps -q web` ] || [ -z `docker ps -q --no-trunc | grep $(docker compose ps -q web)` ]; then
+          task compose -- run --rm web bin/console {{.CLI_ARGS}}
         else
-          task compose-exec -- php bin/console {{.CLI_ARGS}}
+          task compose-exec -- web bin/console {{.CLI_ARGS}}
         fi
+    silent: true
+
+  site:open:
+    desc: "Open site"
+    cmds:
+      - open $(task site:url)
     silent: true
 
   site:url:
@@ -66,16 +72,7 @@ tasks:
     vars:
       URL:
         # Compute base URL if not set.
-        sh: if [ ! -z "{{.SITE_DOMAIN}}" ]; then echo "https://{{.SITE_DOMAIN}}"; else echo "http://$(task compose -- port nginx 8080)"; fi
-    silent: true
-
-  site:update:
-    desc: "Update site"
-    prompt: "This will update your setup. Continue?"
-    cmds:
-      - task start
-      - task console -- doctrine:migrations:migrate --no-interaction
-      - task console -- cache:clear
+        sh: if [ ! -z "{{.SITE_DOMAIN}}" ]; then echo "https://{{.SITE_DOMAIN}}"; else echo "http://$(task --silent compose -- port web 80)"; fi
     silent: true
 
   code-analysis:
@@ -86,19 +83,42 @@ tasks:
   coding-standards:apply:
     desc: "Apply coding standards"
     cmds:
-      - docker pull --quiet peterdavehello/markdownlint
-      - docker run --rm --volume "$PWD:/md" peterdavehello/markdownlint markdownlint '**/*.md' --fix
-      - task composer -- coding-standards-apply
-      - task console -- biomejs:check . --write
+      - task: coding-standards:markdown:apply
+      - task: coding-standards:composer:apply
+      - task: coding-standards:php:apply
+      - task: coding-standards:assets:apply
 
   coding-standards:check:
     desc: "Apply coding standards"
     cmds:
       - task: coding-standards:apply
-      - docker pull --quiet peterdavehello/markdownlint
-      - docker run --rm --volume "$PWD:/md" peterdavehello/markdownlint markdownlint '**/*.md'
+      - task: coding-standards:markdown:check
+      - task: coding-standards:composer:check
+      - task: coding-standards:php:check
+      - task: coding-standards:assets:check
+
+  coding-standards:composer:apply:
+    desc: "Apply PHP coding standards"
+    cmds:
+      - task composer -- normalize
+
+  coding-standards:composer:check:
+    desc: "Apply and check PHP coding standards"
+    cmds:
+      - task: coding-standards:composer:apply
+      - task composer -- normalize --dry-run
+      - task composer -- validate
+
+  coding-standards:php:apply:
+    desc: "Apply PHP coding standards"
+    cmds:
+      - task composer -- coding-standards-apply
+
+  coding-standards:php:check:
+    desc: "Apply and check PHP coding standards"
+    cmds:
+      - task: coding-standards:php:apply
       - task composer -- coding-standards-check
-      - task console -- biomejs:check .
 
   coding-standards:assets:apply:
     desc: "Apply coding standards for assets"
