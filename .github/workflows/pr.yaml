@@ -1,0 +1,31 @@
+name: Review
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  check-composer:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    name: Check composer
+    steps:
+      - uses: actions/checkout@master
+
+      # https://taskfile.dev/installation/#github-actions
+      - name: Install Task
+        uses: arduino/setup-task@v2
+        with:
+          version: 3.x
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: |
+          task compose -- up
+          task compose -- exec web git config --global --add safe.directory /app
+          task coding-standards:composer:check
+
+      - run: |
+          git diff --diff-filter=ACMRT --exit-code

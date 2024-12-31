@@ -30,7 +30,13 @@ tasks:
   composer:
     desc: "Run composer command. Example: task composer -- install"
     cmds:
-      - task compose -- exec web composer {{ .CLI_ARGS }}
+      # See https://serverfault.com/a/935674 for details on the if statement.
+      - |
+        if [ -z `docker compose ps -q web` ] || [ -z `docker ps -q --no-trunc | grep $(docker compose ps -q web)` ]; then
+          task compose -- run --rm web composer {{ .CLI_ARGS }}
+        else
+          task compose -- exec web composer {{ .CLI_ARGS }}
+        fi
     silent: true
 
   composer-install:
