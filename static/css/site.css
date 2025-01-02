@@ -1,0 +1,65 @@
+:root {
+    --main-bg-color: #333;
+}
+
+html:has(.index) {
+    height: 100%;
+
+    body, header {
+        height: 100%;
+    }
+
+    body {
+        background-color: var(--main-bg-color);
+    }
+
+    #background {
+        position: absolute;
+        top: 8rem;
+        right: 1rem;
+        bottom: 8rem;
+        left: 1rem;
+
+        background-image: url("/pipfugl.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    main {
+        position: absolute;
+        bottom: 1em;
+        left: 1rem;
+        right:  1rem;
+        padding: 1rem;
+    }
+
+    .external-navigation {
+        text-align: center;
+
+        a,
+        a:visited {
+            color: #fff;
+            background: #000;
+            padding: 1rem;
+            text-decoration: none;
+        }
+    }
+}
+
+
+:not(.index) {
+    .center {
+        margin-left: initial;
+        margin-right: initial;
+    }
+
+    [class^="mw"], [class*=" mw"],
+    .measure-wide-l {
+        max-width: initial;
+    }
+}
+
+.bg-main {
+    background-color: var(--main-bg-color);
+}

@@ -1,0 +1,82 @@
+baseURL = 'https://mikkelricky.dk/'
+languageCode = 'da'
+title = 'mikkelricky.dk'
+
+# https://github.com/theNewDynamic/gohugo-theme-ananke
+theme = 'ananke'
+# https://github.com/filipecarneiro/hugo-bootstrap-theme/
+# theme = 'hugo-bootstrap-theme'
+
+[params]
+favicon = 'favicon.ico'
+
+# cf. themes/ananke/layouts/partials/site-style.html
+custom_css = ['css/site.css']
+
+# https://themes.gohugo.io/themes/gohugo-theme-ananke/#other-hero-settings
+# https://tachyons.io/
+background_color_class = 'bg-main'
+
+  [params.ananke]
+    show_recent_posts = false
+    recent_posts_number = 1
+    background_color_class = "bg-blue"
+
+[markup]
+  [markup.goldmark]
+    # duplicateResourceFiles = false
+    [markup.goldmark.extensions]
+      definitionList = true
+    #   footnote = true
+    #   linkify = true
+    #   linkifyProtocol = 'https'
+    #   strikethrough = true
+    #   table = true
+    #   taskList = true
+    #   [markup.goldmark.extensions.cjk]
+    #     eastAsianLineBreaks = false
+    #     eastAsianLineBreaksStyle = 'simple'
+    #     enable = false
+    #     escapedSpace = false
+    #   [markup.goldmark.extensions.extras]
+    #     [markup.goldmark.extensions.extras.delete]
+    #       enable = false
+    #     [markup.goldmark.extensions.extras.insert]
+    #       enable = false
+    #     [markup.goldmark.extensions.extras.mark]
+    #       enable = false
+    #     [markup.goldmark.extensions.extras.subscript]
+    #       enable = false
+    #     [markup.goldmark.extensions.extras.superscript]
+    #       enable = false
+    #   [markup.goldmark.extensions.passthrough]
+    #     enable = false
+    #     [markup.goldmark.extensions.passthrough.delimiters]
+    #       block = []
+    #       inline = []
+    #   [markup.goldmark.extensions.typographer]
+    #     apostrophe = '&rsquo;'
+    #     disable = false
+    #     ellipsis = '&hellip;'
+    #     emDash = '&mdash;'
+    #     enDash = '&ndash;'
+    #     leftAngleQuote = '&laquo;'
+    #     leftDoubleQuote = '&ldquo;'
+    #     leftSingleQuote = '&lsquo;'
+    #     rightAngleQuote = '&raquo;'
+    #     rightDoubleQuote = '&rdquo;'
+    #     rightSingleQuote = '&rsquo;'
+    # [markup.goldmark.parser]
+    #   autoHeadingID = true
+    #   autoHeadingIDType = 'github'
+    #   wrapStandAloneImageWithinParagraph = true
+    #   [markup.goldmark.parser.attribute]
+    #     block = false
+    #     title = true
+    # [markup.goldmark.renderHooks]
+    #   [markup.goldmark.renderHooks.image]
+    #     enableDefault = false
+    #   [markup.goldmark.renderHooks.link]
+    #     enableDefault = false
+    [markup.goldmark.renderer]
+      unsafe = true
