@@ -1,0 +1,71 @@
+/*
+img.tx-gt3math-inline {
+	vertical-align: middle;
+}
+img.tx-gt3math-inline.offset {
+	vertical-align: baseline;
+}
+*/
+
+div.csc-textpic div.csc-textpic-imagewrap .csc-textpic-image img.tx-gt3math-display,
+img.tx-gt3math-display {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Left align display math in lists */
+ol li img.tx-gt3math-display,
+ul li img.tx-gt3math-display {
+  display: inline;
+  vertical-align: top !important;
+  /*
+  margin-left: 0;
+  padding-top:0.3em;
+  */
+}
+
+.gt3math-simple {
+	white-space: nowrap;
+}
+
+.gt3math-simple .mi {
+		font-style: italic;
+	/*padding-right: .1em;*/
+}
+
+.gt3math-simple .mi.kern {
+	padding-right: .2em;
+}
+
+.gt3math-simple .mi.kern.prime {
+	padding-right: .3333em;
+}
+
+/*.gt3math-simple sup .mi,*/
+.gt3math-simple sub .mi {
+	padding-right:0.5em;
+}
+
+.gt3math-simple sub {
+		vertical-align: sub;
+}
+
+.gt3math-simple sup {
+		vertical-align: super;
+}
+
+.gt3math-error {
+		border: solid 2px #f00;
+		background: #ff0;
+}
+
+.tx-gt3math-tag {
+	display: block;
+	float: right;
+	width: 0;
+}
+
+.csc-textpic-text p:first-child img.tx-gt3math-display {
+	padding-top: 5px;
+}

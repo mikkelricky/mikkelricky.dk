@@ -15,10 +15,7 @@ Navn
 : Mikkel Ricky Christensen
 
 Adresse
-: <a class="adr" href="https://maps.app.goo.gl/vVgGUkkb4BjfA3Tk9">
-    <span class="street-address">Fælledvej 9</span>,
-    <span class="postal-code">8250</span> <span class="locality">Egå</span>
-  </a>
+: {{< address >}}
 
 E-mailadresse
 : <mikkel@mikkelricky.dk>

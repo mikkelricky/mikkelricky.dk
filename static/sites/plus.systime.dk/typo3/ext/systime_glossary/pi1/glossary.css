@@ -1,0 +1,81 @@
+/* Overview and lists */
+div.systime-glossary-alphabet ul,
+div.systime-glossary-alphabet li {
+	margin: 0 !important;
+}
+
+div.systime-glossary-alphabet li {
+	float: left;
+	/* width: 2em; */
+	list-style: none !important;
+	padding: .5em;
+	text-transform: uppercase;
+}
+
+div.systime-glossary-alphabet li.selected {
+	font-weight: bolder;
+}
+
+dl.systime-glossary {
+	margin: 1em 0 !important;
+}
+
+dl.systime-glossary dd,
+dl.systime-glossary dt {
+	margin: 0 !important;
+}
+
+dl.systime-glossary dt {
+	font-weight: bolder;
+}
+
+dfn.glossary {
+	color: #f00;
+	cursor: help;
+}
+/*
+dfn.glossary:after {
+	content: "*";
+}
+*/
+
+.page-glossary {
+	border: solid 1px #007;
+}
+
+.page-glossary .hd {
+	color: #fff;
+	background: #007;
+}
+
+.systime-glossary-terms.right {
+	float: right;
+	width: 30%;
+}
+
+/* Categories */
+dfn.glossary-1,
+.systime-glossary-alphabet.glossary-1 {
+	color: #f00 !important;
+}
+dfn.glossary-2,
+.systime-glossary-alphabet.glossary-2 {
+	color: #0f0 !important;
+}
+dfn.glossary-3,
+.systime-glossary-alphabet.glossary-3 {
+	color: #00f !important;
+}
+
+/* Popup */
+#glossaryPopup .show-more {
+  cursor: pointer;
+}
+
+#glossaryPopup .category {
+  float: right;
+}
+
+#glossaryPopup .container-close:focus {
+	outline: none;
+}

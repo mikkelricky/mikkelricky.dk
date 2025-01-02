@@ -1,0 +1,64 @@
+.systime-content
+table th[scope="rowgroup"] {
+vertical-align: top;
+text-align: left;
+background: #f00;
+}
+
+table.contenttable
+th {
+	background-color: #443333 !important;
+	color: #fff;
+	font-weight: bold !important;
+	font-size: 0.89em;
+	border-color: #fff;
+	border-color: #bfb9a9;
+}
+
+table.contenttable
+td {
+	background-color: #f6f4ee;
+	font-size: 0.89em;
+	border-color: #bfb9a9;
+}
+
+td.dark {
+	background: #ddd7c4 !important;
+}
+
+span.nowrap {
+	white-space: nowrap;	
+}
+
+table.contenttable th.reset,
+table.contenttable td.reset {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+table.contenttable th.vcenter,
+table.contenttable td.vcenter {
+  vertical-align: middle;
+  text-align: center;
+}
+
+table.contenttable th.width188,
+table.contenttable td.width188 {
+  width: 188px;
+}
+
+td.dark-and-center {
+  vertical-align: middle !important;
+  text-align: center !important;
+  background: #ddd7c4 !important;
+  border: none !important;
+}
+
+table.contenttable td.height68 {
+  height: 18px !important;
+  vertical-align: middle !important;
+  /*text-align: center !important;*/
+  padding: 15px;
+  
+}
+

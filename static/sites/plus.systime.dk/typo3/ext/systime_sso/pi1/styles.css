@@ -1,0 +1,62 @@
+/* Activate YUI CSS Grids inside topbar */
+systime-topbar .yui-gb .yui-u,#systime-topbar .yui-g .yui-gb .yui-u,#systime-topbar .yui-gb .yui-g,#systime-topbar .yui-gb .yui-gb,#systime-topbar .yui-gb .yui-gc,#systime-topbar .yui-gb .yui-gd,#systime-topbar .yui-gb .yui-ge,#systime-topbar .yui-gb .yui-gf,#systime-topbar .yui-gc .yui-u,#systime-topbar .yui-gc .yui-g,#systime-topbar .yui-gd .yui-u{float:left;}#systime-topbar .yui-g .yui-u,#systime-topbar .yui-g .yui-g,#systime-topbar .yui-g .yui-gb,#systime-topbar .yui-g .yui-gc,#systime-topbar .yui-g .yui-gd,#systime-topbar .yui-g .yui-ge,#systime-topbar .yui-g .yui-gf,#systime-topbar .yui-gc .yui-u,#systime-topbar .yui-gd .yui-g,#systime-topbar .yui-g .yui-gc .yui-u,#systime-topbar .yui-ge .yui-u,#systime-topbar .yui-ge .yui-g,#systime-topbar .yui-gf .yui-g,#systime-topbar .yui-gf .yui-u{float:right;}#systime-topbar .yui-g div.first,#systime-topbar .yui-gb div.first,#systime-topbar .yui-gc div.first,#systime-topbar .yui-gd div.first,#systime-topbar .yui-ge div.first,#systime-topbar .yui-gf div.first,#systime-topbar .yui-g .yui-gc div.first,#systime-topbar .yui-g .yui-ge div.first,#systime-topbar .yui-gc div.first div.first{float:left;}#systime-topbar .yui-g .yui-u,#systime-topbar .yui-g .yui-g,#systime-topbar .yui-g .yui-gb,#systime-topbar .yui-g .yui-gc,#systime-topbar .yui-g .yui-gd,#systime-topbar .yui-g .yui-ge,#systime-topbar .yui-g .yui-gf{width:49.1%;}#systime-topbar .yui-gb .yui-u,#systime-topbar .yui-g .yui-gb .yui-u,#systime-topbar .yui-gb .yui-g,#systime-topbar .yui-gb .yui-gb,#systime-topbar .yui-gb .yui-gc,#systime-topbar .yui-gb .yui-gd,#systime-topbar .yui-gb .yui-ge,#systime-topbar .yui-gb .yui-gf,#systime-topbar .yui-gc .yui-u,#systime-topbar .yui-gc .yui-g,#systime-topbar .yui-gd .yui-u{width:32%;margin-left:1.99%;}#systime-topbar .yui-gb .yui-u{*margin-left:1.9%;*width:31.9%;}#systime-topbar .yui-gc div.first,#systime-topbar .yui-gd .yui-u{width:66%;}#systime-topbar .yui-gd div.first{width:32%;}#systime-topbar .yui-ge div.first,#systime-topbar .yui-gf .yui-u{width:74.2%;}#systime-topbar .yui-ge .yui-u,#systime-topbar .yui-gf div.first{width:24%;}#systime-topbar .yui-g .yui-gb div.first,#systime-topbar .yui-gb div.first,#systime-topbar .yui-gc div.first,#systime-topbar .yui-gd div.first{margin-left:0;}#systime-topbar .yui-g .yui-g .yui-u,#systime-topbar .yui-gb .yui-g .yui-u,#systime-topbar .yui-gc .yui-g .yui-u,#systime-topbar .yui-gd .yui-g .yui-u,#systime-topbar .yui-ge .yui-g .yui-u,#systime-topbar .yui-gf .yui-g .yui-u{width:49%;*width:48.1%;*margin-left:0;}#systime-topbar .yui-g .yui-g .yui-u{width:48.1%;}#systime-topbar .yui-g .yui-gb div.first,#systime-topbar .yui-gb .yui-gb div.first{*margin-right:0;*width:32%;_width:31.7%;}#systime-topbar .yui-g .yui-gc div.first,#systime-topbar .yui-gd .yui-g{width:66%;}#systime-topbar .yui-gb .yui-g div.first{*margin-right:4%;_margin-right:1.3%;}#systime-topbar .yui-gb .yui-gc div.first,#systime-topbar .yui-gb .yui-gd div.first{*margin-right:0;}#systime-topbar .yui-gb .yui-gb .yui-u,#systime-topbar .yui-gb .yui-gc .yui-u{*margin-left:1.8%;_margin-left:4%;}#systime-topbar .yui-g .yui-gb .yui-u{_margin-left:1.0%;}#systime-topbar .yui-gb .yui-gd .yui-u{*width:66%;_width:61.2%;}#systime-topbar .yui-gb .yui-gd div.first{*width:31%;_width:29.5%;}#systime-topbar .yui-g .yui-gc .yui-u,#systime-topbar .yui-gb .yui-gc .yui-u{width:32%;_float:right;margin-right:0;_margin-left:0;}#systime-topbar .yui-gb .yui-gc div.first{width:66%;*float:left;*margin-left:0;}#systime-topbar .yui-gb .yui-ge .yui-u,#systime-topbar .yui-gb .yui-gf .yui-u{margin:0;}#systime-topbar .yui-gb .yui-gb .yui-u{_margin-left:.7%;}#systime-topbar .yui-gb .yui-g div.first,#systime-topbar .yui-gb .yui-gb div.first{*margin-left:0;}#systime-topbar .yui-gc .yui-g .yui-u,#systime-topbar .yui-gd .yui-g .yui-u{*width:48.1%;*margin-left:0;}#systime-topbar .yui-gb .yui-gd div.first{width:32%;}#systime-topbar .yui-g .yui-gd div.first{_width:29.9%;}#systime-topbar .yui-ge .yui-g{width:24%;}#systime-topbar .yui-gf .yui-g{width:74.2%;}#systime-topbar .yui-gb .yui-ge div.yui-u,#systime-topbar .yui-gb .yui-gf div.yui-u{float:right;}#systime-topbar .yui-gb .yui-ge div.first,#systime-topbar .yui-gb .yui-gf div.first{float:left;}#systime-topbar .yui-gb .yui-ge .yui-u,#systime-topbar .yui-gb .yui-gf div.first{*width:24%;_width:20%;}#systime-topbar .yui-gb .yui-ge div.first,#systime-topbar .yui-gb .yui-gf .yui-u{*width:73.5%;_width:65.5%;}#systime-topbar .yui-ge div.first .yui-gd .yui-u{width:65%;}#systime-topbar .yui-ge div.first .yui-gd div.first{width:32%;}#systime-topbar .yui-g:after,#systime-topbar .yui-gb:after,#systime-topbar .yui-gc:after,#systime-topbar .yui-gd:after,#systime-topbar .yui-ge:after,#systime-topbar .yui-gf:after{content:".";display:block;height:0;clear:both;visibility:hidden;}#systime-topbar .yui-g,#systime-topbar .yui-gb,#systime-topbar .yui-gc,#systime-topbar .yui-gd,#systime-topbar .yui-ge,#systime-topbar .yui-gf{zoom:1;}
+
+#systime-topbar {
+	background: #fff;
+	border-bottom: 1px solid #a1a1a1;
+	min-height: 23px;
+	padding: 4px 1em 0;
+}
+
+#systime-topbar,
+#systime-topbar div,
+#systime-topbar a {
+	font-family: arial, helvetica, clean, sans-serif;
+	font-size: 13px;
+	color: #000;
+	font-weight: normal;
+}
+
+#systime-topbar .yui-u {
+	text-align: right;
+}
+#systime-topbar div.first {
+	text-align: left;
+}
+
+/* IE still sucks ... */
+* html #systime-topbar {
+	height: 23px;
+}
+
+#systime-topbar a, #systime-topbar a:visited {
+	/* color: #770000; */
+  color: #AA0C0C;
+	text-decoration:none;
+}
+#systime-topbar a:hover {
+	text-decoration:underline;
+}
+.tx-systimesso-pi1 {
+	padding: 4px 1em 0;
+	min-height: 23px; /* height of logo image */
+	background: #fff;
+}
+
+.tx-systimesso-pi1 .yui-u {
+	text-align: right;
+}
+
+.tx-systimesso-pi1 div.first {
+	text-align: left;
+}
+
+.tx-systimesso-pi1 a,
+.tx-systimesso-pi1 a:visited {
+	color: #700;
+	text-decoration: none;
+}
+
+.tx-systimesso-pi1 a:hover {
+	text-decoration: underline;
+}

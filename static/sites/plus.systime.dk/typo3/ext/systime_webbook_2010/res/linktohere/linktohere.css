@@ -1,0 +1,82 @@
+.linktohere {
+  white-space: nowrap;
+  color: #b2b2b2;
+  font-size: 8px;
+  font-weight: normal;
+  text-transform: uppercase;
+  vertical-align: 2px;
+  cursor: pointer; }
+  .linktohere .label {
+    background-color: #fff;
+    padding: 0 2px;
+    border: solid 1px #dadada;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px; }
+  .linktohere .id {
+    background-color: #fff;
+    letter-spacing: 1px;
+    visibility: hidden;
+    padding: 0 2px 0 0;
+    border: solid 1px #dadada;
+    border-width: 1px 1px 1px 0;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  .linktohere:hover {
+    color: #fff; }
+    .linktohere:hover .label {
+      background-color: #9b9b9b;
+      border-color: #9b9b9b;
+      border-right-width: 0;
+      -webkit-border-top-right-radius: 0;
+      -webkit-border-bottom-right-radius: 0;
+      -moz-border-radius-topright: 0;
+      -moz-border-radius-bottomright: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    .linktohere:hover .id {
+      background-color: #9b9b9b;
+      border-color: #9b9b9b;
+      visibility: visible; }
+  .linktohere.page-title:hover, .linktohere#content .csc-header:hover {
+    background: #efefef; }
+
+#page-header .linktohere {
+  font-size: 9px; }
+
+h1 a.permalink, h2 a.permalink, h3 a.permalink {
+  text-decoration: none !important;
+  color: inherit !important; }
+
+#linktohere-panel ul, #linktohere-panel li {
+  list-style: none;
+  margin: 0;
+  white-space: nowrap; }
+#linktohere-panel label {
+  width: 6em;
+  display: inline-block; }
+#linktohere-panel input:focus {
+  outline: none; }
+#linktohere-panel #linktohere-url {
+  width: 30em; }
+#linktohere-panel #linktohere-key {
+  width: 6em; }
+#linktohere-panel .info {
+  padding-left: 1em;
+  color: #888;
+  font-size: 85%; }
+#linktohere-panel .help {
+  margin-left: .5em;
+  text-indent: -9999px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(linktohere.png);
+  background-position: -80px 0;
+  background-repeat: no-repeat; }
+#linktohere-panel #linktohere-addthis {
+  float: right; }

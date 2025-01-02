@@ -1,0 +1,85 @@
+.tx-systimeembed-pi1 .graftegner a {
+	display: block;
+	width: 160px;
+	height: 40px; 
+	overflow: hidden;
+	text-indent: -9999px;
+	background: transparent url(button_graph.png) 0 0 no-repeat;
+}
+
+.tx-systimeembed-pi1 .formelsamling a {
+        display: block;
+        width: 160px;
+        height: 40px;
+        overflow: hidden;
+        text-indent: -9999px;
+        background: transparent url(button_formel.png) 0 0 no-repeat;
+}
+
+.tx-systimeembed-pi1 .content-popup a {
+  display: block;
+  width: 177px;
+  height: 40px;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: transparent url(button_content-popup.png) 0 0 no-repeat;
+}
+
+
+.button-formelsamling {
+white-space: nowrap;
+height: 40px;
+position: relative;
+}
+
+span.button-formelsamling {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.button-formelsamling .icon {
+/*float: left;*/
+display: inline-block;
+vertical-align: middle;
+height: 40px;
+width: 40px;
+background: transparent url(togglable_sprite.png) -320px -50px no-repeat;
+}
+
+.button-formelsamling .content {
+display: inline-block;
+vertical-align: middle;
+max-width: 1150px;
+height: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;
+background: transparent url(togglable_sprite.png) -20px -10px no-repeat;
+}
+
+.button-formelsamling .arrow {
+display: inline-block;
+vertical-align: middle;
+height: 40px;
+width: 20px;
+background: transparent url(togglable_sprite.png) -1180px -10px no-repeat;
+}
+
+.button-formelsamling a,
+.button-formelsamling a:hover,
+.button-formelsamling a:visited {
+color: #000;
+text-decoration: none;
+}
+
+.button-formelsamling .content {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 75%;
+  font-family: arial, helvetica, verdana, tahoma;
+  min-width: 80px;
+  text-align: center;
+}

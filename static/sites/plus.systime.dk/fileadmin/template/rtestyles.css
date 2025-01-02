@@ -1,0 +1,18 @@
+td.center-no-border {
+  vertical-align: middle !important;
+  text-align: center !important;
+  border: none  !important;
+  width: 159px;
+}
+
+.stjerne .csc-header {
+  background-image: url(../img/icon_important.png);
+  background-repeat: no-repeat;
+  min-height:26px;
+  padding-left:32px;
+  padding-top:4px;
+}
+
+td.no-border {
+  border: none;
+  }

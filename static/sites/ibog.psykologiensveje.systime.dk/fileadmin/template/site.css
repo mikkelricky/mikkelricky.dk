@@ -1,0 +1,12 @@
+/* Site specific CSS */
+.systime-emphasize {
+    -moz-border-radius: 4px 4px 4px 4px;
+    padding: 0;
+    background-color: #F0EBDF;
+    border: 1px solid #D1C096;
+}
+.systime-emphasize .systime-block-lining {
+    -moz-border-radius: 4px 4px 4px 4px;
+    border: 1px solid #FFFFFF;
+    padding: 0.5em 12px;
+}

@@ -1,0 +1,813 @@
+/*
+Theme Name: Systime Lab
+Theme URI:
+Description:
+Version: 0.0
+Author: Mikkel Ricky
+Author URI:
+Tags: Systime, YUI
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+html {
+	background-color: #e7e7e7;
+	overflow: scroll;
+}
+
+body {
+	font-family: Tahoma,arial,helvetica,clean,sans-serif;
+}
+
+#doc {
+	border: solid 1px #a1a1a1;
+	padding: 2px 2em 2em;
+	margin-top: 1em;
+	background-color: #fff;
+
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+
+.systime-frieze {
+	background-color: transparent;
+	background-position: top right;
+	background-repeat: no-repeat; }
+
+.systime-frieze * {
+	vertical-align: middle; }
+
+.systime-frieze {
+	display: inline-block;
+/* margin-left: 20px; */
+}
+.systime-frieze:after {
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	clear: both;
+	visibility: hidden; }
+html[xmlns] .systime-frieze {
+	display: block; }
+* html .systime-frieze {
+	height: 1px; }
+.systime-frieze.shaded {
+	margin-left: 28px; }
+.systime-frieze #logo, .systime-frieze #search {
+	float: left; }
+.systime-frieze #search {
+	margin-top: 2.5em;
+	margin-top: 32px; }
+.systime-frieze #search form .yui-button {
+	vertical-align: middle; }
+.systime-frieze #search form .yui-button button {
+	min-height: 0;
+	line-height: 1.5; }
+.systime-frieze #search form input {
+	width: 28em;
+	*width: 27em;
+	color: #666666; }
+.systime-frieze #search form input.active {
+	color: #000; }
+.systime-frieze #search form button {
+	margin-left: 1em;
+	width: 8em;
+	*width: 7em; }
+.systime-frieze #search form input, .systime-frieze #search form button {
+	border: solid 1px #cccccc; }
+
+.systime-frieze .logo {
+/* margin-left: -20px; */
+}
+.systime-frieze .logo img {
+	vertical-align: bottom; }
+
+.systime-frieze {
+	*margin-left: 0; }
+.systime-frieze .logo {
+	*margin-left: 0; }
+
+.systime-frieze #catchphrase {
+	float: left;
+	margin-top: 22px;
+	font-size: 108%;
+}
+
+
+#systime-frieze {
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+#systime-logo {
+	float: right;
+	margin-right: 29px;
+	margin-top: 21px;
+
+	/* IE6 */
+	_margin-right: 9px;
+}
+
+/*
+#featuredposts.yui-navset .yui-nav {
+	margin: 0 !important;
+}
+
+#featuredposts.yui-navset .yui-content .yui-g {
+	float: none;
+}
+*/
+
+/* #categorylisting */
+.systime-lab-g1 .yui-u {
+	width: 100%;
+}
+
+.systime-lab-g2 .systime-lab-u {
+	width: 49%;
+	float: right;
+}
+
+.systime-lab-g2 div.systime-lab-u.first {
+	float: left;
+}
+
+.systime-lab-g3 div.systime-lab-u {
+	width: 32%;
+	float: right;
+}
+
+.systime-lab-g3 div.systime-lab-u.first {
+	float: left;
+}
+
+
+/* http://sourceforge.net/tracker/index.php?func=detail&aid=2077229&group_id=165715&atid=836476 */
+/* Patch for GB within GE */
+.yui-ge div.first .yui-gb .yui-u {width:32%;}
+.yui-ge div.first .yui-gb div.first {width:32%;}
+
+.yui-ge .yui-g {
+	width: 100%;
+}
+
+#publications.yui-navset .yui-content {
+	border: none;
+	background: transparent url(css/images/bg_fade01.png) 0 0 repeat-x;
+	padding: 0 1px;
+}
+
+#publications.yui-navset .yui-content .tab-content {
+	background: transparent url(css/images/bg_fade02.png) 0 0 repeat-x;
+	min-height: 200px;
+	padding: 1em;
+}
+
+
+#subjectslist {
+	/* background-color: #ffedf0; */
+	border: solid 1px #dfdfdf;
+	/* padding: 1em; */
+	margin-top: 1em;
+}
+
+#teasers,
+#subjectslist {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+
+x#subjectslist .bd {
+	border-style: solid;
+	border-color: #dfdfdf;
+	border-width: 0 1px;
+	/* padding: 0 1px; */
+	margin: 0 1px 0;
+}
+
+#subjectslist .hd {
+	/* border-style: solid; */
+	/* border-color: #dfdfdf; */
+	/* border-width: 0 0 1px 0; */
+	/* padding: 0 1px; */
+	/* margin: 0 1px 0; */
+	background: transparent url(css/images/123-saadan-gor-du.png) 100% 50% no-repeat;
+	margin-right: 1em;
+}
+
+#subjectslist .hd h1 {
+	font-size: 108%;
+	font-weight: bolder;
+	padding: .25em 1em;
+
+	/*
+	border-style: solid;
+	border-color: #dfdfdf;
+	border-width: 0 1px;
+	margin: 0 -1px;
+	*/
+}
+#subjectslist .bd {
+	border-top: solid 1px #dfdfdf;
+	padding: 1em;
+}
+
+#searchform {
+	border-style: solid;
+	border-color: #808080;
+	border-width: 1px 0;
+	margin: 0 1px 0;
+}
+
+#searchform .wrapper {
+	border-style: solid;
+	border-color: #808080;
+	border-width: 0 1px;
+	margin: 0 -1px;
+
+	color: #fff;
+	background: #a02a26 url(css/images/sprite.png) repeat-x left -1400px;
+	padding: .5em;
+}
+#searchform .wrapper * {
+	vertical-align: middle;
+}
+#searchform .wrapper #s {
+	width: 100px;
+}
+
+a {
+	color: #b50d00;
+	text-decoration: none;
+}
+a:hover {
+	background-color: #dedede;
+}
+
+.page-title {
+	border-style: solid;
+	border-color: #808080;
+	border-width: 1px 0;
+	/* padding: 0 1px; */
+	margin: 0 1px 1em;
+}
+
+.page-title h1 {
+	border-style: solid;
+	border-color: #808080;
+	border-width: 0 1px;
+	margin: 0 -1px;
+
+	font-size: 182%;
+	color: #fff;
+	background: #a02a26 url(css/images/sprite.png) repeat-x left -1400px;
+	padding: .1em .25em;
+
+	vertical-align: bottom;
+}
+
+.page-title .subjects {
+	float: right;
+	font-size: 123.1%;
+	color: #fff;
+	/* vertical-align: bottom; */
+	padding-top: .5em;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+.page-title a {
+	text-decoration: underline;
+	color: #fff;
+}
+
+
+/* Widgets */
+.widget {
+	margin-bottom: 1em;
+}
+.widget + .widget + .widget {
+	border-top: solid 2px #dfdfdf;
+	padding-top: 1em;
+	margin-bottom: 1em;
+}
+
+.widget .hd h1 {
+	font-weight: bolder;
+	font-size: 93%;
+}
+
+x.widget .feed {
+	background: transparent url(css/images/feed-icon-14x14.png) 0 0 no-repeat;
+	padding-left: 20px;
+}
+
+.widget .feed .feed-icon {
+	padding-right: 4px;
+	vertical-align: middle;
+}
+
+.widget .feed .bd,
+.widget .feed .help {
+	margin-left: 18px;
+}
+.widget .feed .bd {
+	text-indent: -18px;
+	margin-bottom: .5em;
+}
+
+.widget.systimelab_widgets_somebodysBlog div.avatar {
+	float: left;
+	width: 50px;
+}
+.widget.systimelab_widgets_somebodysBlog div.avatar img {
+	border: solid 1px #a6a6a6;
+}
+.widget.systimelab_widgets_somebodysBlog div.content {
+	margin-left: 50px;
+}
+
+.widget.systimelab_widgets_latestPosts .categories {
+	font-size: 80%;
+}
+
+ul.link-list li {
+	/* margin-left: 1em; */
+	/* list-style-image: url(css/images/list-bullet.png); */
+	padding: 0 1em;
+	background: transparent url(css/images/bullet0.png) 0 6px no-repeat;
+}
+
+ul.link-list li:hover {
+	background-image: url(css/images/bullet1.png);
+}
+
+.current-publication .current-publication-bd {
+	border: solid 1px #a6a6a6;
+	background: #ffedf0;
+	padding: 1em;
+}
+
+.current-publication .systime-frieze .systime-logo img {
+	vertical-align: bottom;
+}
+
+.systime-logo img {
+	display: block;
+}
+
+.current-publication .yui-g {
+	width: auto;
+	float: none;
+}
+
+.current-publication .authors .author {
+	margin-top: 1em;
+}
+.current-publication .authors .author .name {
+	display: block;
+}
+
+.current-publication .authors .author img.avatar {
+	float: left;
+	margin-right: 1em;
+}
+
+.current-publication .links {
+	margin-top: 1em;
+}
+
+.user-list .user {
+	margin-top: 1em;
+}
+.user-list .user .type {
+	font-weight: bolder;
+}
+.user-list .user .name {
+	display: block;
+}
+
+.user-list .user img.avatar {
+	float: left;
+	margin-right: 10px;
+	border: solid 1px #a6a6a6;
+}
+
+.user-list .user .details {
+	margin-left: 50px;
+	font-size: 85%;
+}
+
+.post-list .post {
+	margin: 1em 0;
+}
+
+.post-list .post .hd {
+	text-align: right;
+}
+
+.post-list .post .bd {
+	border: solid 1px #a6a6a6;
+	background: #eee;
+	padding: 1em;
+}
+
+.post-list .post .bd h1 {
+	font-size: 131%;
+	border-bottom: solid 1px #a6a6a6;
+	margin-bottom: .25em;
+	padding-bottom: .5em;
+}
+
+/* .post-list .post .bd	 */
+.author-profile {
+	border-bottom: solid 1px #a6a6a6;
+	/* margin-bottom: .25em; */
+	margin-bottom: 1em;
+	/* margin-top: 1em; */
+	/* padding-bottom: .25em; */
+	padding-bottom: .5em;
+}
+
+.author-profile img {
+	float: left;
+	margin-right: 1em;
+}
+
+.author-description img {
+	float: left;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+.current-publication .ft,
+.single-post .ft,
+.post-list .post .ft {
+	text-align: right;
+}
+
+
+#sidebar {
+	background: transparent url(css/images/pausefisk.png) repeat-x left bottom;
+	padding-bottom: 272px;
+}
+
+
+/* Custom carousel buttons */
+.yui-skin-sam .yui-carousel-button {
+}
+
+.yui-skin-sam span.yui-carousel-first-button {
+}
+
+.yui-skin-sam .yui-carousel-nav ul {
+}
+
+.yui-skin-sam .yui-carousel-nav {
+}
+
+.yui-carousel-element li,
+.yui-carousel .yui-carousel-item-selected {
+	border: none;
+	vertical-align: top;
+}
+
+.yui-carousel-element .publication {
+	margin-left: 16px;
+	margin-right: 17px;
+}
+
+.yui-carousel-nav .title {
+	float: left;
+}
+.yui-carousel-nav .title h1 {
+	font-size: 182%;
+	color: #fff;
+	padding: 0 .25em;
+}
+
+#page-navigation {
+/* height: 1em; */
+/* font-size: 0.8462em; */
+}
+
+#page-navigation ol {
+	float: right;
+}
+
+#page-navigation ol li {
+	float: left;
+	margin-left: 1em;
+}
+
+
+/* Publication list */
+#publications .publication {
+	margin-bottom: 1em;
+}
+
+#publications .publication .info {
+	float: left;
+	width: 202px; /* Publication images are 200px wide and have a 1px border */
+}
+
+#publications .publication .hd h1 {
+	font-size: 131%;
+	margin-bottom: .1em;
+}
+
+#publications .publication .content {
+	margin-left: 220px;
+}
+
+#publications .publication div.participate {
+	margin-top: .5em;
+}
+
+#publications .publication span.participate {
+	white-space: nowrap;
+}
+
+
+.teasers {
+	margin-bottom: 1em;
+}
+
+x.teasers {
+	border-style: solid;
+	border-color: #808080;
+	border-width: 1px 0;
+	margin: 0 1px 0;
+}
+
+#teasers {
+	border-style: solid;
+	border-color: #808080;
+/* border-width: 0 1px; */
+/* margin: 0 -1px; */
+}
+
+#teasers .publication {
+	width: 150px;
+	text-align: left;
+
+	/* IE6 */
+	_overflow: hidden;
+	_width: 130px;
+}
+
+#teasers .publication-title {
+	font-weight: bold;
+}
+
+#teasers .systime-logo,
+#publications .systime-logo,
+.publication .systime-frieze,
+.current-publication .systime-frieze {
+	border: solid 1px #a6a6a6;
+	margin-bottom: 1em;
+}
+
+#teasers .systime-logo {
+	margin-bottom: 0;
+}
+
+#teasers .publication .info img {
+	/* width: 148px; */
+	/* *width: 200px; */
+	-ms-interpolation-mode: bicubic;
+}
+
+#bd {
+	margin-top: 1em;
+}
+
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+
+.single-post {
+	background: transparent url(css/images/bg_fade01.png) 0 0 repeat-x;
+	padding: 0 1px;
+	border-top: solid 1px #a6a6a6;
+}
+
+.single-post .post {
+	background: transparent url(css/images/bg_fade03.png) 0 0 repeat-x;
+	padding: 1em;
+	min-height: 205px;
+}
+
+.single-post .post .hd h1 {
+	font-size: 131%;
+	border-bottom: solid 1px #a6a6a6;
+	margin-bottom: .25em;
+}
+
+.post-comments .hd h2,
+.post-a-comment .hd h2 {
+	font-size: 138.5%;
+}
+
+.post-comments .comment {
+	margin-bottom: 1em;
+	border: solid 1px #a6a6a6;
+	padding: 1em;
+	background: #eee;
+}
+
+.post-a-comment form {
+	border: solid 1px #a6a6a6;
+	padding: 1em;
+	background: #eee;
+}
+
+.post-a-comment form textarea#comment {
+	width: 100%;
+}
+
+.post .post-a-comment {
+	text-align: right;
+}
+
+
+.yui-skin-sam .yui-button {
+	background-image: url(css/images/sprite.png);
+	background-position: 0 -100px;
+}
+
+.yui-skin-sam .yui-button button,
+.yui-skin-sam .yui-button a {
+	min-height: 1.6em; /* For Gecko */
+	*min-height: auto; /* For IE */
+	line-height: 1.6;
+	*line-height: 1.36; /* For IE */
+}
+
+.buttons {
+	text-align: right;
+	margin-top: 1em;
+}
+
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left
+}
+
+
+*:focus {outline: none}
+
+#footer {
+	margin:auto;
+	min-width:750px;
+	text-align:left;
+	width:57.69em;
+	background-color: transparent;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 85%;
+	color: #444;
+}
+#footer a {
+	color: inherit;
+	text-decoration: underline;
+}
+#footer .left {
+	text-align: left;
+}
+#footer .right {
+	text-align: right;
+	padding-right: 6px;
+}
+#footer .center {
+	text-align: center;
+}
+
+#footer .yui-u {
+	width: auto;
+}
+#footer .yui-u .left, #footer .yui-u .right {
+	white-space: nowrap;
+}
+#footer .yui-u .left {
+	margin-right: .5em;
+}
+#footer .yui-u .right {
+	margin-left: .5em;
+}
+
+#teasers .excerpt {
+	margin-top: 3px;
+}
+#teasers .excerpt .subjects {
+	font-size: 85%;
+	color: #666;
+	display: block;
+}
+
+.widget.systimelab_widgets_somebodysBlog .description {
+	font-style: italic;
+}
+/* .widget */
+
+.systime-content h1, .systime-content h2, .systime-content h3 {
+	clear: both;
+}
+
+.widget.systimelab_widgets_somebodysBlog .content h1 {
+	font-weight: bold;
+}
+
+#get_recent_posts_wrap,
+.widget.widget_recent_posts #recentposts,
+#get_recent_comments_wrap,
+.widget.widget_recent_comments #recentcomments {
+	font-size: 85%;
+}
+
+#get_recent_posts_wrap li,
+#get_recent_comments_wrap li {
+	margin-top: .3em;
+	margin-bottom: 1em;
+}
+
+#get_recent_posts_wrap li:hover,
+#get_recent_comments_wrap li:hover {
+	background-color: #dedede;
+}
+
+.widget.systimelab_widgets_rssFeed .bd:hover {
+	background-color: #dedede;
+}
+
+
+ul.media-types {
+	float: left;
+}
+ul.media-types li {
+	border: solid 1px #000;
+	float: left;
+	margin: 1px 5px 1px 1px;
+	font-size: 77%;
+	font-weight: normal;
+	padding: 0 1px;
+}
+
+span.media-type {
+	background: #998c8a;
+	color: #fff;
+	/* margin-right: 5px; */
+	font-size: 77%;
+	font-weight: bolder;
+	padding: 0 2px;
+	text-transform: uppercase;
+}
+
+.tab-content .publication span.media-type,
+.single-post span.media-type,
+.current-publication span.media-type {
+	display: block;
+	float: left;
+	margin: 2px 3px 0 0;
+}

@@ -1,0 +1,120 @@
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+/* base.css, part of YUI's CSS Foundation */
+.systime-content h1 {
+	/*18px via YUI Fonts CSS foundation*/
+	font-size:138.5%;
+}
+.systime-content h2 {
+	/*16px via YUI Fonts CSS foundation*/
+	font-size:123.1%;
+}
+.systime-content h3 {
+	/*14px via YUI Fonts CSS foundation*/
+	font-size:108%;
+}
+.systime-content h1, .systime-content h2, .systime-content h3 {
+	/* top & bottom margin based on font size */
+	margin:1em 0;
+}
+.systime-content h1, .systime-content h2, .systime-content h3, .systime-content h4, .systime-content h5, .systime-content h6, .systime-content strong {
+	/*bringing boldness back to headers and the strong element*/
+	font-weight:bold;
+}
+.systime-content abbr, .systime-content acronym {
+	/*indicating to users that more info is available */
+	border-bottom:1px dotted #000;
+	cursor:help;
+}
+.systime-content em {
+	/*bringing italics back to the em element*/
+	font-style:italic;
+}
+.systime-content del {
+	text-decoration:line-through;
+}
+.systime-content blockquote,.systime-content ul,.systime-content ol,.systime-content dl {
+	/*giving blockquotes and lists room to breath*/
+	margin:1em;
+}
+.systime-content ol, .systime-content ul, .systime-content dl {
+	/*bringing lists on to the page with breathing room */
+	margin-left:2em;
+}
+.systime-content ol li {
+	/*giving OL's LIs generated numbers*/
+	list-style: decimal outside;
+}
+.systime-content ul li {
+	/*giving UL's LIs generated disc markers*/
+	list-style: disc outside;
+}
+.systime-content dl dd {
+	/*giving UL's LIs generated numbers*/
+	margin-left:1em;
+}
+.systime-content th, .systime-content td {
+	/*borders and padding to make the table readable*/
+	border:1px solid #000;
+	padding:.5em;
+}
+.systime-content th {
+	/*distinguishing table headers from data cells*/
+	font-weight:bold;
+	text-align:center;
+}
+.systime-content caption {
+	/*coordinated margin to match cell's padding*/
+	margin-bottom:.5em;
+	/*centered so it doesn't blend in to other content*/
+	text-align:center;
+}
+.systime-content p, .systime-content fieldset, .systime-content table, .systime-content pre {
+	/*so things don't run into each other*/
+	margin-bottom:1em;
+}
+/* setting a consistent width, 160px;
+   control of type=file still not possible */
+.systime-content input[type=text], .systime-content input[type=password], .systime-content textarea{width:12.25em;*width:11.9em;}
+
+.systime-content h1, .systime-content h2, .systime-content  h3 {
+	margin-bottom: .2308em;
+}
+
+.systime-content blockquote {
+	margin: 0;
+  padding-left: 24px;
+  background: transparent url(quote.png) 0 0 no-repeat
+}
+
+.systime-content p {
+	margin-bottom: .5em;
+}
+
+
+
+/* clearfix */
+.systime-content:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.systime-content {
+    display: inline-block;
+}
+
+html[xmlns] .systime-content {
+    display: block;
+}
+
+* html .systime-content {
+    height: 1%;
+}

@@ -1,0 +1,16 @@
+body,ul,ol,p,th,td,tr,dl,h1,h2,h3,h4 { font-family: sans-serif; }
+pre,tt { font-family: monospace; }
+A:link { color: #c00; }
+A:visited { color: #800; }
+A:active { color: #f00; }
+
+a.keyword { text-decoration:none; color:black; font-weight:bold; }
+a.idDef { color:#009900; font-style:italic; }
+a.idUse { color:#009900; font-style:italic; }
+a.error { color:black; font-style:italic; background-color: red; }
+a.macroDef { color:blue; font-weight:bold; }
+a.macroCall { text-decoration:none; color:blue; font-weight:bold; }
+a.macroSep { text-decoration:none; color:blue; font-weight:bold; }
+a.macroFormal { text-decoration:none; color:navy; font-weight:bold; font-style:italic; }
+a.macroArg { text-decoration:none; color:navy; font-weight:bold; font-style:italic; }
+a.nonterminal { text-decoration:none; color:navy; font-style:italic; }

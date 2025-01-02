@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" >
+    <meta name="Description" content="&lt;bigwig&gt; - A Programming Language for Developing Interactive Web Services" >
+    <meta name="Keywords" content="bigwig, Web Service, Programming, Language, Compiler" >
+    <meta name="Copyright" content="Copyright (C), BRICS 1998-2001" >
+    <meta name="Rating" content="General" >
+    <meta name="Robots" content="All" >
+    <title>&lt;bigwig&gt; - powerforms</title>
+    <link href="../css/homepage.css" rel=stylesheet type="text/css" >
+    <script type="text/javascript" src="../js/homepage.js"></script>
+    <style type="text/css">
+      div.code {
+	font-family: sans-serif;
+	padding-left: 1cm;
+      }
+      div.example {
+	padding-left: 1cm;
+      }
+    </style>
+  </head>
+  <body background="../img/bg.gif" bgcolor="#ffffcc" onLoad="getToplevelImages();">
+    <table>
+      <tr valign=top>
+	<td width="140" nowrap>
+	  <img src="../img/1pixel.gif" width="140" height="1" alt="" ><br >
+	  <a href="http://www.brics.dk/bigwig/" onmouseover="return select('bigwig');" onmouseout="return deselect('bigwig');">
+	    <img alt="" name="bigwig" src="../img/bigwig-m.gif" width="130" height="20" border="0" ></a><br ><br >
+	  <a href="http://www.brics.dk/bigwig/introduction/" onmouseover="return select('introduction');" onmouseout="return deselect('introduction');">
+	    <img alt="" name="introduction" src="../img/introduction-m.gif" width="130" height="20" border="0" ></a><br >
+	  <a href="http://www.brics.dk/bigwig/news/" onmouseover="return select('news');" onmouseout="return deselect('news');">
+	    <img alt="" name="news" src="../img/news-m.gif" width="130" height="20" border="0" ></a><br ><br >
+	  <a href="http://www.brics.dk/bigwig/download/" onmouseover="return select('download');" onmouseout="return deselect('download');">
+	    <img alt="" name="download" src="../img/download-m.gif" width="130" height="20" border="0" ></a><br >
+	  <a href="http://www.brics.dk/bigwig/installation/" onmouseover="return select('installation');" onmouseout="return deselect('installation');">
+	    <img alt="" name="installation" src="../img/installation-m.gif" width="130" height="20" border="0" ></a><br >
+	  <a href="http://www.brics.dk/bigwig/compiling/" onmouseover="return select('compiling');" onmouseout="return deselect('compiling');">
+	    <img alt="" name="compiling" src="../img/compiling-m.gif" width="130" height="20" border="0" ></a><br ><br >
+	  <a href="http://www.brics.dk/bigwig/examples/" onmouseover="return select('examples');" onmouseout="return deselect('examples');">
+	    <img alt="" name="examples" src="../img/examples-m.gif" width="130" height="20" border="0" ></a><br >
+	  <a href="http://www.brics.dk/bigwig/tutorial/" onmouseover="return select('tutorial');" onmouseout="return deselect('tutorial');">
+	    <img alt="" name="tutorial" src="../img/tutorial-m.gif" width="130" height="20" border="0" ></a><br >
+	  <a href="http://www.brics.dk/bigwig/refman/" onmouseover="return select('reference_manual');" onmouseout="return deselect('reference_manual');">
+	    <img alt="" name="reference_manual" src="../img/reference_manual-m.gif" width="130" height="20" border="0" ></a><br ><br >
+	  <a href="http://www.brics.dk/bigwig/runwig/" onmouseover="return select('runtime_system');" onmouseout="return setCurrent('runtime_system');">
+	    <img alt="" name="runtime_system" src="../img/runtime_system-m.gif" width="130" height="20" border="0" ></a><br >
+	  <a href="index.html" onmouseover="return select('powerforms');" onmouseout="return deselect('powerforms');">
+	    <img alt="" name="powerforms" src="../img/powerforms-b.gif" width="130" height="20" border="0" ></a><br ><br >
+	  <a href="http://www.brics.dk/bigwig/people/" onmouseover="return select('people');" onmouseout="return deselect('people');">
+	    <img alt="" name="people" src="../img/people-m.gif" width="130" height="20" border="0" ></a><br >
+	  <a href="http://www.brics.dk/bigwig/publications/" onmouseover="return select('publications');" onmouseout="return deselect('publications');">
+	    <img alt="" name="publications" src="../img/publications-m.gif" width="130" height="20" border="0" ></a><br >
+	  <a href="http://www.brics.dk/bigwig/presentations/" onmouseover="return select('presentations');" onmouseout="return deselect('presentations');">
+	    <img alt="" name="presentations" src="../img/presentations-m.gif" width="130" height="20" border="0" ></a><br >
+	  <a href="http://www.brics.dk/bigwig/contact/" onmouseover="return select('contact');" onmouseout="return deselect('contact');">
+	    <img alt="" name="contact" src="../img/contact-m.gif" width="130" height="20" border="0" ></a><br >
+	</td>
+	<td width="99%">
+	  <h1><font color="#ff0000">&lt;</font>PowerForms<font color="#ff0000">&gt;</font></h1>
+
+	  <hr size="3" noshade="noshade">
+
+	  <p>
+	    PowerForms is a tool for extending HTML forms with
+	    client-side input validation. The validation requirements
+	    are stated in a declarative manner, that is, one tells
+	    what should hold for certain form fields rather than
+	    telling <em>how</em> to check whether it holds.
+	  </p>
+
+	  <p>
+	    In PowerForms, requirements are called <em>formats</em> and
+	    they are built from regular expressions together with
+	    constructs for specifying dependencies among different
+	    form fields. When a format is associated with a form field
+	    the field will continously be checked to see if its value
+	    meets the given requirement.
+	  </p>
+
+	  <p>
+	    A client-side user can only submit a form when all
+	    requirements are met, and an attempt to submit an invalid
+	    form will result in an appropriate error message.
+	  </p>
+
+	  <p>
+	    PowerForms relies on standard scripting technology
+	    (JavaScript) in modern browsers and for compatibility only
+	    the subset known to work in most browsers are used. (The
+	    generated code has been succesfully tested in Netscape 4
+	    under Unix, Mozilla under Linux, and MS Explorer under
+	    Windows.)
+	  </p>
+
+<hr size=3 noshade>
+
+	  <h2>Short Introduction</h2>
+
+	  <p>
+	    Assume that a web-programmer, for some reason, wants the
+	    user to enter a year in the 20th century, ie. 1901-2000,
+	    in a field on a form. The programmer can then add the
+	    following to his HTML file:
+	  </p>
+
+	  <div class="code">
+	    &lt;<a href="http://www.brics.dk/bigwig/powerforms/syntax/#format (field) [sem]"><b>format</b></a> <b>field</b>="year"&gt;<br >
+	    &nbsp;&nbsp;&nbsp;&nbsp;&lt;<a href="http://www.brics.dk/bigwig/powerforms/syntax/#interval [sem]"><b>interval</b></a> <b>low="1900"</b> <b>high="2001"</b> /&gt;<br >
+	    &lt;/<b>format</b>
+	  </div>
+
+	  <p>
+	    This states that the field named <em>year</em> must
+	    contain a number ranging from <em>1901</em> through
+	    <em>2000</em> to be valid. The user will not be able to
+	    submit the form until the format is satisfied.
+	  </p>
+
+	  <p>
+	    When the initially sees the HTML page he will see something
+	    like this:
+	  </p>
+
+	  <div class="example">
+	    <form action="index.html">
+	      Year:
+	      <input value="" type="text" size="4" onkeydown="return false;" onkeyup="return false;" readonly>
+	      <img src="misc/yellow.gif" align="middle" alt="yellow">
+	    </form>
+	  </div>
+
+	  <p>
+	    The yellow "traffic light" (<em>status image</em>) shows
+	    that the field contains incomplete input and that the
+	    input can be made valid by adding to it.
+	  </p>
+
+	  <p>
+	    If the user has been properly instructed - and complies -
+	    he will enter, say, <em>1975</em> and the status image
+	    will change accordingly:
+	  </p>
+
+	  <div class="example">
+	    <form action="index.html">
+	      Year:
+	      <input value="19" type="text" size="4" onkeydown="return false;" onkeyup="return false;"  readonly>
+	      <img src="misc/yellow.gif" align="middle" alt="yellow">
+
+	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      .&nbsp;.&nbsp;.
+	      becomes
+	      .&nbsp;.&nbsp;.
+	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	      Year:
+	      <input value="1975" type="text" size="4" onkeydown="return false;" onkeyup="return false;"  readonly>
+	      <img src="misc/green.gif" align="middle" alt="green">
+	    </form>
+	  </div>
+
+	  <p>
+	    If the user enters more data the status image will change
+	    to show that something is wrong:
+	  </p>
+
+	  <div class="example">
+	    <form action="index.html">
+	      Year:
+	      <input value="1975.0" type="text" size="6" onkeydown="return false;" onkeyup="return false;"  readonly>
+	      <img src="misc/red.gif" align="middle" alt="red">
+	    </form>
+	  </div>
+
+	  <p>
+	    The red light indicates that the input is invalid and
+	    that some of it must be removed to make it valid.
+	  </p>
+
+	  <hr noshade="noshade" size="3" >
+
+	  <table width="99%">
+	    <tr valign="top">
+	      <th>
+		<a href="http://www.brics.dk/bigwig/powerforms/syntax/"><img src="images/syntax.gif" height="50" width="50" border="0" alt="syntax"></a>
+	      </th>
+	      <th>
+		<a href="http://www.brics.dk/bigwig/powerforms/extra/"><img src="images/extra.gif" height="50" width="50" border="0" alt="extra features"></a>
+	      </th>
+	      <th>
+		<a href="http://www.brics.dk/bigwig/powerforms/examples/"><img src="images/examples.gif" height="50" width="50" border="0" alt="examples"></a>
+	      </th>
+	      <th>
+		<a href="http://www.brics.dk/bigwig/powerforms/download/"><img src="images/download.gif" height="50" width="50" border="0"  alt="download"></a>
+	      </th>
+	    </tr>
+	    <tr>
+	      <th><a href="http://www.brics.dk/bigwig/powerforms/syntax/">Syntax</a></th>
+	      <th><a href="http://www.brics.dk/bigwig/powerforms/extra/">Extra features</a></th>
+	      <th><a href="http://www.brics.dk/bigwig/powerforms/examples/">Examples</a></th>
+	      <th><a href="http://www.brics.dk/bigwig/powerforms/download/">Download</a></th>
+	    </tr>
+	  </table>
+
+	  <!--
+	  <hr noshade="noshade" size="3" >
+
+	  <h2>News</h2>
+
+	  <h3>Version 2.0 released</h3>
+
+	  <p>
+	    A new version of PowerForms has been released. Some
+	    highlights in this version are
+	  </p>
+
+	  <ul>
+	    <li>support for multiple forms</li>
+	    <li>different types of input-fields can have the same name</li>
+	  </ul>
+
+	  <p>
+	    Check out the <a href="download/">download page</a>.
+	  </p>
+
+	  <h3>Windows-version</h3>
+
+	  <p>
+	    You can now download a precompiled windows version of the PowerForms
+	    tool from the <a href="download/">download</a> page. The version is
+	    compiled without support for compile-time inclusion over the internet,
+	    but is otherwise complete.
+	  </p>
+
+	  <p>
+	    Using the gnu c-compiler for Windows, <a href="http://sourceware.cygnus.com/cygwin/">cygwin</a>,
+	    you can build a Windows version from the source code
+	    yourself.
+	  </p>
+	  -->
+
+	  <!--
+<h3>Online PowerForms demo</h3>
+
+<script type="text/javascript">
+  function startSession(session) {
+    document.forms['session'].__ses.value = session;
+    document.forms['session'].submit();
+  }
+</script>
+
+<form id="session" name="session" action="http://www.bigwig.brics.dk/powerforms/connector.cgi" method="post">
+  <input type="hidden" name="_cfg" value="powerforms.cfg">
+  <input type="hidden" name="_dir" value="power_compile">
+  <input type="hidden" name="__ses" value="Compile">
+</form>
+
+<p>
+You can try the PowerForms compiler by clicking this link: <a
+href="javascript:startSession('Compile');">PowerForms demo</a>
+</p>
+-->
+
+	  <hr noshade="noshade" size="3" >
+
+
+	  <h3>Research Paper</h3>
+
+	  <p>
+	    For more information on the ideas behind PowerForms, we refer to the research paper:
+	    <b>&quot;<a href="http://www.brics.dk/bigwig/publications/#powerforms">PowerForms: Declarative Client-side Form Field Validation</a>&quot;</b>
+	  </p>
+
+
+<p><hr size=3 noshade>
+<table width="100%"><tr><td>
+<font size=2><tt><a href="mailto:bigwig@brics.dk">bigwig@brics.dk</a></tt><br>
+Last updated: November 1, 2001</font>
+</td>
+<td align=right>
+<a href="http://validator.w3.org/check/referer"><img border="0"
+   src="../img/valid-html401.gif"
+   alt="Valid HTML 4.01!" height="31" width="88"></a>
+</td>
+</table>
+
+</td>
+</tr>
+</table>
+</body>
+</html>
+

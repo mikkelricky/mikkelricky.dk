@@ -1,0 +1,34 @@
+# robots.txt for http://www.brics.dk/
+# $Id: robots.txt,v 1.4 2000/01/05 23:37:25 engberg Exp $
+
+User-agent: *
+Disallow: /users/ # This contains links to peoples public_html
+# Internal URL spaces with restricted access
+Disallow: /kernel-index/
+Disallow: /kernel.org/
+Disallow: /kernel/
+Disallow: /master/
+Disallow: /old/
+Disallow: /test/
+Disallow: /testknl/
+Disallow: /testsec/
+Disallow: /waa/
+# Other Internal URL spaces
+Disallow: /Activities/97/CMAAA-int/
+Disallow: /Activities/97/CSL97/internal/
+Disallow: /Activities/97/CSL97/old-sys/
+Disallow: /Activities/97/CSL97/sys/
+Disallow: /Activities/98/AFM98-int/
+Disallow: /Activities/98/AQIP98-int/
+Disallow: /Activities/98/ICALP98-int/
+Disallow: /Activities/98/ICALP98-registration/
+Disallow: /Activities/98/PTAC98-int/
+Disallow: /Activities/98/XXXX98-int/
+Disallow: /Activities/99/SemanticsSchool-int/
+Disallow: /LastChanged/
+Disallow: /PhDSchool-int/
+Disallow: /PhDSchool-old-int/
+Disallow: /Reservations/
+Disallow: /STARS/
+Disallow: /old-test/
+Disallow: /testupd/

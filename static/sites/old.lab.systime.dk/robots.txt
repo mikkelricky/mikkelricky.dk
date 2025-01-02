@@ -1,0 +1,4 @@
+
+# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://lab.systime.dk/sitemap.xml.gz
+# END XML-SITEMAP-PLUGIN

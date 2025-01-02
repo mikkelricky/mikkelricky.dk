@@ -1,0 +1,24 @@
+.gsc-tabsArea,
+.gsc-resultsHeader,
+.gsc-results .gsc-cursor-box .gsc-trailing-more-results {
+  display: none !important; }
+
+.tx-systimegooglesearch-pi1 .gsc-control {
+  width: 100%; }
+
+#systimegooglesearch-content-result {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+.gsc-completion-container td {
+  text-align: left; }
+
+#systimegooglesearch-content-result a {
+  color: #00c; }
+#systimegooglesearch-content-result a.query {
+  text-decoration: none;
+  font-weight: bolder; }
+
+#systimegooglesearch-result .gs-no-results-result .gs-snippet {
+  background-color: #ddd;
+  border-color: #7e7e7e; }

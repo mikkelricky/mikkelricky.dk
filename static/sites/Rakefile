@@ -1,0 +1,26 @@
+task :default do
+  urls = [
+    'http://plus.systime.dk/',
+    'http://plus.systime.dk/?572',
+    # 'http://konto.systime.dk/',
+    'http://ibog.psykologiensveje.systime.dk/',
+    'http://old.lab.systime.dk/',
+    'http://verdenidanskperspektiv.systime.dk/',
+    'http://www.systime.dk/',
+    'http://www.systime.dk/index.php',
+    'http://www.brics.dk/bigwig/',
+    'http://www.daimiposten.au.dk/Arkiv/December97/arbejdsliv-2.html',
+    'http://www.daimiposten.au.dk/Arkiv/December98/foredrag.html',
+  ]
+  urls.each do |url|
+    cmd = [
+      'wget',
+      '--page-requisites',
+      '--convert-links',
+      '--adjust-extension',
+      '--restrict-file-names=windows',
+      '"'+url+'"'
+    ].flatten.join(' ')
+    sh cmd
+  end
+end

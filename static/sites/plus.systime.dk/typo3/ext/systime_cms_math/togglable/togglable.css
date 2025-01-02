@@ -1,0 +1,162 @@
+.systime-toggle {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .systime-toggle > .hd {
+    padding-top: 0;
+    background-image: url("togglable_sprite.png");
+    background-# position: -126px -10px;
+    background-position: -126px -90px;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 40px;
+    # width: 34px;
+    # width: 0;
+    width: auto;
+    margin-right: 32px;
+    margin-left: 126px; }
+    .systime-toggle > .hd .header {
+      background-image: url("togglable_sprite.png");
+      background-position: 0px -90px;
+      background-repeat: no-repeat;
+      width: 126px;
+      height: 40px;
+      margin-left: -126px; }
+    .systime-toggle > .hd .arrow {
+      position: absolute;
+      width: 34px;
+      height: 40px;
+      top: 0;
+      right: -34px;
+      background-image: url("togglable_sprite.png");
+      background-position: -1166px -90px;
+      background-repeat: no-repeat; }
+    .systime-toggle > .hd h1 {
+      display: none; }
+  .systime-toggle > .bd {
+    background-color: white;
+    margin-top: -10px;
+    padding-top: 10px;
+    border-style: solid;
+    border-width: 0 1px;
+    border-color: #e4e4e4; }
+    .systime-toggle > .bd h1, .systime-toggle > .bd h2, .systime-toggle > .bd h3 {
+      margin-top: 0; }
+    .systime-toggle > .bd .content {
+      padding: 10px 10px 0;
+      border-style: solid;
+      border-width: 0 1px;
+      border-color: white; }
+      .systime-toggle > .bd .content > :last-child {
+        margin-bottom: 0; }
+        .systime-toggle > .bd .content > :last-child p:last-child, .systime-toggle > .bd .content > :last-child ol:last-child, .systime-toggle > .bd .content > :last-child ul:last-child {
+          margin-bottom: 0; }
+  .systime-toggle > .ft {
+    background-image: url("togglable_sprite.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 10px;
+    position: relative;
+    margin-right: 20px; }
+    .systime-toggle > .ft div {
+      background-image: url("togglable_sprite.png");
+      background-position: -1178px 0;
+      background-repeat: no-repeat;
+      height: 10px;
+      width: 20px;
+      position: absolute;
+      top: 0;
+      right: -20px; }
+  .systime-toggle.togglable > .bd,
+  .systime-toggle.togglable > .ft {
+    display: none; }
+  .systime-toggle.togglable > .hd {
+    cursor: pointer;
+    width: 0;
+    background-position: -126px -10px; }
+    .systime-toggle.togglable > .hd .header {
+      background-position: 0px -10px; }
+    .systime-toggle.togglable > .hd .arrow {
+      background-position: -1200px -10px; }
+  .systime-toggle.togglable.expanded > .hd {
+    width: auto; }
+    .systime-toggle.togglable.expanded > .hd .arrow {
+      background-position: -1234px -10px; }
+  .systime-toggle.togglable.expanded > .bd,
+  .systime-toggle.togglable.expanded > .ft {
+    display: block; }
+
+.systime-toggle.math-video > .hd .header {
+  background-position: 0px -130px; }
+.systime-toggle.math-video.togglable > .hd .header {
+  background-position: 0px -50px; }
+.systime-toggle.math-interactivity > .hd .header {
+  background-position: -160px -130px; }
+.systime-toggle.math-interactivity.togglable > .hd .header {
+  background-position: -160px -50px; }
+.systime-toggle.math-interactive-formula > .hd .header {
+  background-position: -320px -130px; }
+.systime-toggle.math-interactive-formula.togglable > .hd .header {
+  background-position: -320px -50px; }
+.systime-toggle.math-interactive-exercise > .hd .header {
+  background-position: -480px -130px; }
+.systime-toggle.math-interactive-exercise.togglable > .hd .header {
+  background-position: -480px -50px; }
+.systime-toggle.math-exercise > .hd .header {
+  background-position: -640px -130px; }
+.systime-toggle.math-exercise.togglable > .hd .header {
+  background-position: -640px -50px; }
+.systime-toggle.math-task > .hd .header {
+  background-position: -800px -130px; }
+.systime-toggle.math-task.togglable > .hd .header {
+  background-position: -800px -50px; }
+.systime-toggle.math-quiz > .hd .header {
+  background-position: -960px -130px; }
+.systime-toggle.math-quiz.togglable > .hd .header {
+  background-position: -960px -50px; }
+.systime-toggle.math-example > .hd .header {
+  background-position: -1120px -130px; }
+.systime-toggle.math-example.togglable > .hd .header {
+  background-position: -1120px -50px; }
+.systime-toggle.math-read-more > .hd .header {
+  background-position: -1280px -130px; }
+.systime-toggle.math-read-more.togglable > .hd .header {
+  background-position: -1280px -50px; }
+
+.systime-toggle.math-reveal-answer {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+  .systime-toggle.math-reveal-answer > .hd {
+    background-image: url("togglable_sprite.png");
+    background-position: 0 -90px;
+    background-repeat: no-repeat;
+    margin-left: 0;
+    height: 20px; }
+    .systime-toggle.math-reveal-answer > .hd .header {
+      width: 43px;
+      height: 12px;
+      background-position: -1282px -102px;
+      margin-left: 0; }
+    .systime-toggle.math-reveal-answer > .hd .arrow {
+      height: 12px;
+      display: block;
+      background-position: -1166px -90px; }
+  .systime-toggle.math-reveal-answer > .bd .content {
+    padding: 0 10px 0;
+    border: none; }
+  .systime-toggle.math-reveal-answer.togglable > .hd {
+    background-image: none; }
+    .systime-toggle.math-reveal-answer.togglable > .hd .header {
+      background-position: -1228px -102px; }
+    .systime-toggle.math-reveal-answer.togglable > .hd .arrow {
+      display: none; }
+  .systime-toggle.math-reveal-answer.expanded > .hd {
+    background-image: url("togglable_sprite.png");
+    background-position: 0 -90px;
+    background-repeat: no-repeat;
+    margin-left: 0; }
+    .systime-toggle.math-reveal-answer.expanded > .hd .header {
+      background-position: -1282px -102px;
+      margin-left: 0; }
+    .systime-toggle.math-reveal-answer.expanded > .hd .arrow {
+      display: block;
+      background-position: -1166px -90px; }

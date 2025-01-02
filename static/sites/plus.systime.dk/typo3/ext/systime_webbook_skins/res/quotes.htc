@@ -1,0 +1,40 @@
+<public:attach event="oncontentready" onevent="init();" />
+<script>
+var matches = navigator.userAgent.match(/MSIE\s([^;]*)/);
+var version = matches ? parseFloat(matches[1]) : 8;
+
+// alert([ matches, version, parseFloat('asd') < 8 ].join("\n"));
+
+/*
+ * This will make each level of nested quotes alternate between
+ * single and double quotes.
+ * Reference: http://en.wikipedia.org/wiki/Quotation_mark
+ * @see http://willcode4beer.com/tips.jsp?set=fixIEQuotes
+ */
+var quotes = [ "»", "«", '"', '"' ];
+
+/* Returns the level that a tag is nested within itself  */
+var getNestedLevel = function(tagName, node, cLevel){
+	var level = 0;
+	var parent = node.parentNode;
+	if (parent != null) {
+		if (node.parentNode.tagName == tagName) {
+			level++;
+		}
+		level += getNestedLevel(tagName, parent, level);
+	}
+	return level;
+}
+
+var init = function() {
+	if (version < 8) {
+		var nestedLevel = getNestedLevel(this.tagName, this, 0),
+		numberOfQuotes = Math.floor(quotes.length/2),
+		quoteIndex = nestedLevel%numberOfQuotes,
+		openQ = document.createTextNode(quotes[2*quoteIndex+0]),
+		closeQ = document.createTextNode(quotes[2*quoteIndex+1]);
+		this.insertBefore(openQ, this.firstChild);
+		this.appendChild(closeQ);
+	}
+}
+</script>

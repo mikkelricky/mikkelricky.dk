@@ -1,0 +1,20 @@
+{{ $company := .Get "company" }}
+{{ $id := .Get "id" }}
+{{ $dateFormat := "Jan 2006" }}
+<div class="item" id={{ $id | default $company|anchorize }}>
+    <div class="hd">
+        <div class="date-range">
+            <span class="start date">{{ time.Format $dateFormat (.Get "start") }}</span>–{{ if .Get "end" }}<span class="end date">{{ time.Format $dateFormat (.Get "end") }}</span>{{ end }}
+        </div>
+        <span class="title">{{ .Get "title" }}</span>
+        {{- " ved " -}}
+        {{- if .Get "company-url" -}}
+        <a class="company" href="{{ .Get "company-url" }}">{{ .Get "company" }}</a>
+        {{- else -}}
+        <span class="company">{{ .Get "company" }}</span>
+        {{- end -}}
+    </div>
+
+{{ .Inner }}
+
+</div>

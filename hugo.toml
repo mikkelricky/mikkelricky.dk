@@ -1,5 +1,11 @@
 baseURL = 'https://mikkelricky.dk/'
+# https://gohugo.io/getting-started/configuration/#languagecode
+# https://gohugo.io/functions/time/format/#localization
 languageCode = 'da'
+# defaultContentLanguage must be set to localize dates.
+# https://discourse.gohugo.io/t/issue-with-multilingual-date-time-format/37575/2
+defaultContentLanguage = 'da'
+
 title = 'mikkelricky.dk'
 
 # https://github.com/theNewDynamic/gohugo-theme-ananke
