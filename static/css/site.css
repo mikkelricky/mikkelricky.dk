@@ -21,7 +21,7 @@ html:has(.index) {
 		bottom: 8rem;
 		left: 1rem;
 
-		background-image: url("/pipfugl.svg");
+		background-image: url("../pipfugl.svg");
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
